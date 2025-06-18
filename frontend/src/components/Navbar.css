@@ -1,0 +1,74 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  padding: 0.75rem 2rem;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-left,
+.navbar-right {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.navbar-left li a,
+.navbar-right li a,
+.logout-button {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left li a:hover,
+.navbar-right li a:hover,
+.logout-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffeb3b;
+  box-shadow: 0 0 10px #ffeb3b;
+}
+
+.logout-button {
+  font-family: inherit;
+  font-weight: 700;
+}
+
+.logout-button:focus,
+.navbar-right li a:focus,
+.navbar-left li a:focus {
+  outline: none;
+  box-shadow: 0 0 8px 2px #ffeb3b;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navbar-left,
+  .navbar-right {
+    gap: 1rem;
+    justify-content: center;
+    margin: 0.5rem 0;
+  }
+
+}
